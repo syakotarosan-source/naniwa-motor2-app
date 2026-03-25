@@ -11,143 +11,166 @@
 
     body {
       margin: 0;
-      background: #0b0b0f;
-      color: #fff;
+      background: #f4f6fb;
+      color: #111827;
       font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      font-size: 17px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 24px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #171720, #111);
-      border: 1px solid #2b2b36;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      background: linear-gradient(135deg, #ffffff, #eef3ff);
+      border: 1px solid #d6deee;
+      border-radius: 22px;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 30px rgba(42, 67, 101, 0.08);
     }
 
     h1 {
-      margin: 0 0 8px;
-      font-size: 34px;
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1.2;
+      color: #1547b7;
     }
 
     .desc {
       margin: 0;
-      color: #b8b8c7;
-      line-height: 1.7;
+      color: #475569;
+      line-height: 1.8;
+      font-size: 17px;
     }
 
     .toolbar {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 12px;
-      margin: 20px 0;
+      margin: 22px 0;
     }
 
     input {
       width: 100%;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid #2b2b36;
-      background: #121218;
-      color: #fff;
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 1px solid #cfd8e7;
+      background: #ffffff;
+      color: #111827;
       outline: none;
-      font-size: 15px;
+      font-size: 17px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    input::placeholder {
+      color: #7b8798;
     }
 
     button {
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1px solid #2b2b36;
-      background: #1b1b24;
-      color: #fff;
+      padding: 14px 18px;
+      border-radius: 16px;
+      border: 1px solid #c7d3eb;
+      background: #2563eb;
+      color: #ffffff;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.15s ease;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
     }
 
     button:hover {
-      background: #252532;
+      background: #1d4ed8;
+      transform: translateY(-1px);
     }
 
     .meta {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
-      color: #b8b8c7;
-      font-size: 14px;
+      margin-bottom: 22px;
+      color: #475569;
+      font-size: 15px;
     }
 
     .pill {
-      background: #14141b;
-      border: 1px solid #2b2b36;
+      background: #ffffff;
+      border: 1px solid #d6deee;
       border-radius: 999px;
-      padding: 8px 12px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 18px;
     }
 
     .card {
-      background: #121218;
-      border: 1px solid #2b2b36;
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      background: #ffffff;
+      border: 1px solid #d6deee;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
     }
 
     .card h2 {
-      margin: 0 0 6px;
-      font-size: 20px;
+      margin: 0 0 8px;
+      font-size: 24px;
       line-height: 1.4;
+      color: #0f172a;
     }
 
     .note {
-      color: #9d9db0;
-      font-size: 13px;
+      color: #64748b;
+      font-size: 14px;
       margin-bottom: 14px;
     }
 
     .row {
-      background: #0d0d12;
-      border-radius: 12px;
-      padding: 10px 12px;
+      background: #f8fbff;
+      border: 1px solid #e1e8f5;
+      border-radius: 14px;
+      padding: 12px 14px;
       margin-bottom: 10px;
     }
 
     .label {
-      color: #8d8da3;
-      font-size: 12px;
-      margin-bottom: 4px;
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 5px;
+      font-weight: 700;
     }
 
     .value {
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.7;
       word-break: break-word;
+      color: #111827;
     }
 
     .actions {
       display: flex;
       justify-content: flex-end;
-      margin-top: 10px;
+      margin-top: 12px;
+    }
+
+    .copy-btn {
+      min-width: 110px;
     }
 
     .empty {
       text-align: center;
-      padding: 40px 20px;
-      color: #aaa;
-      border: 1px dashed #333;
-      border-radius: 18px;
-      background: #121218;
+      padding: 44px 20px;
+      color: #64748b;
+      border: 2px dashed #cfd8e7;
+      border-radius: 20px;
+      background: #ffffff;
+      font-size: 18px;
     }
 
     @media (max-width: 700px) {
@@ -156,11 +179,19 @@
       }
 
       h1 {
-        font-size: 28px;
+        font-size: 34px;
       }
 
       .container {
         padding: 16px;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .card h2 {
+        font-size: 22px;
       }
     }
   </style>
@@ -376,13 +407,20 @@
         .replace(/[（）()［］[\]\s　\-]/g, "");
     }
 
-    function copyGang(gang) {
+    function copyGang(gang, button) {
       const text =
 `【${gang.name}】
 メイン: ${gang.main}
 サブ: ${gang.sub}
 パールセント: ${gang.pearlescent}`;
-      navigator.clipboard.writeText(text);
+
+      navigator.clipboard.writeText(text).then(() => {
+        const original = button.textContent;
+        button.textContent = "コピー済";
+        setTimeout(() => {
+          button.textContent = original;
+        }, 1400);
+      });
     }
 
     function render(items) {
@@ -423,11 +461,12 @@
           </div>
 
           <div class="actions">
-            <button type="button">コピー</button>
+            <button type="button" class="copy-btn">コピー</button>
           </div>
         `;
 
-        card.querySelector("button").addEventListener("click", () => copyGang(gang));
+        const button = card.querySelector("button");
+        button.addEventListener("click", () => copyGang(gang, button));
         list.appendChild(card);
       });
     }
