@@ -201,8 +201,8 @@
     <div class="hero">
       <h1>🎨 ギャングカラー検索</h1>
       <p class="desc">
-        チーム名、色名、RGB、通称で検索できる一覧アプリです。
-        GitHub Pagesにそのまま置ける1ファイル版です。
+        チーム名、色名、RGB、通称で検索できます。<br>
+        最初は検索画面だけ表示され、入力すると結果が出ます。
       </p>
     </div>
 
@@ -423,9 +423,14 @@
       });
     }
 
-    function render(items) {
+    function render(items, hasKeyword = false) {
       list.innerHTML = "";
       resultCount.textContent = items.length;
+
+      if (!hasKeyword) {
+        list.innerHTML = '<div class="empty">上の検索欄にチーム名・色名・RGB・通称を入力してください。</div>';
+        return;
+      }
 
       if (items.length === 0) {
         list.innerHTML = '<div class="empty">該当なし。検索ワードを変えてみてください。</div>';
@@ -473,7 +478,7 @@
 
     function filterGangs(keyword) {
       const q = normalize(keyword);
-      if (!q) return gangs;
+      if (!q) return [];
 
       return gangs.filter((gang) => {
         const haystack = normalize([
@@ -489,15 +494,16 @@
     }
 
     totalCount.textContent = gangs.length;
-    render(gangs);
+    render([], false);
 
     search.addEventListener("input", () => {
-      render(filterGangs(search.value));
+      const keyword = search.value.trim();
+      render(filterGangs(keyword), keyword.length > 0);
     });
 
     clearBtn.addEventListener("click", () => {
       search.value = "";
-      render(gangs);
+      render([], false);
       search.focus();
     });
   </script>
